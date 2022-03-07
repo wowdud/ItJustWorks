@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6679247428483803409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 382787885526159505}
+  - component: {fileID: 2735527323310635461}
+  m_Layer: 0
+  m_Name: Swipe Input Handler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &382787885526159505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6679247428483803409}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7871611211819800304}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2735527323310635461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6679247428483803409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74833b7662f94d4782104fa8718bd6eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touchAction: {fileID: 7086670565403673599, guid: 46c1e13bc9e2a1c40b485acb54de7e3c, type: 3}
 --- !u!1 &7092067582205546741
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,6 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
   m_ActionsAsset: {fileID: -944628639613478452, guid: 46c1e13bc9e2a1c40b485acb54de7e3c, type: 3}
   m_PointAction: {fileID: -7377133214672566408, guid: 46c1e13bc9e2a1c40b485acb54de7e3c, type: 3}
   m_MoveAction: {fileID: -7730942794775942701, guid: 46c1e13bc9e2a1c40b485acb54de7e3c, type: 3}
@@ -187,6 +232,7 @@ Transform:
   m_Children:
   - {fileID: 7871611213659841780}
   - {fileID: 5328270776092887483}
+  - {fileID: 382787885526159505}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -204,6 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 2553176741133391872}
   joystick: {fileID: 706814145856880674}
+  swipeInput: {fileID: 2735527323310635461}
 --- !u!1 &7871611212822168794
 GameObject:
   m_ObjectHideFlags: 0

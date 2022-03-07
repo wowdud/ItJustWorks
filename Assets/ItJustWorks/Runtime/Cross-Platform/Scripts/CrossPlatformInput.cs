@@ -20,10 +20,17 @@ namespace ItJustWorks.CrossPlatform
 
 		[SerializeField] private PlayerInput input;
 		[SerializeField] private MobileJoystickHandler joystick;
+		[SerializeField] private SwipeInputHandler swipeInput;
 
 		private void Start()
 		{
 			joystick.Initialise(input);
+			swipeInput.Initialise(input);
+		}
+
+		private void Update()
+		{
+			swipeInput.Process();
 		}
 	}
 }
