@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   touchAction: {fileID: 7086670565403673599, guid: 46c1e13bc9e2a1c40b485acb54de7e3c, type: 3}
+  mouseTouchAction: {fileID: 7086670565403673599, guid: 46c1e13bc9e2a1c40b485acb54de7e3c, type: 3}
+  mousePosAction: {fileID: 8433120337153954314, guid: 46c1e13bc9e2a1c40b485acb54de7e3c, type: 3}
 --- !u!1 &7092067582205546741
 GameObject:
   m_ObjectHideFlags: 0

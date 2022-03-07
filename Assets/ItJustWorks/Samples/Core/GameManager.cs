@@ -6,7 +6,8 @@ namespace ItJustWorks.Samples
 {
 	public class GameManager : Singleton<GameManager>
 	{
-		public int enemyCount;
+		[ReadOnly] public int enemyCount;
+		[Scene] public string otherScene;
 
 		public List<Gun> guns = new List<Gun>();
 		public List<Enemy> enemies = new List<Enemy>();
