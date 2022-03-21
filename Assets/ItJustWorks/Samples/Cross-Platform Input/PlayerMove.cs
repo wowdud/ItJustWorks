@@ -9,7 +9,7 @@ namespace ItJustWorks.Samples.CrossPlatform
 		private void Update()
 		{
 			Vector2 axis = CrossPlatformInput.GetMovementAxis() * Time.deltaTime;
-			transform.position += transform.forward * axis.y + transform.right * axis.x;
+			transform.position += transform.up * axis.y + transform.right * axis.x;
 		}
 	}
 }
