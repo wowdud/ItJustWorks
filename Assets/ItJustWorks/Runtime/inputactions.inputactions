@@ -205,7 +205,7 @@
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Gamepad",
+                    "groups": "Gamepad;Touch",
                     "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false

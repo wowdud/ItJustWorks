@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 namespace ItJustWorks.CrossPlatform
 {
@@ -11,12 +12,38 @@ namespace ItJustWorks.CrossPlatform
 		[SerializeField] private RectTransform handle;
 		[SerializeField] private RectTransform background;
 		[SerializeField, Range(0, 1)] private float deadzone = .25f;
+		[SerializeField] private InputActionReference movementAction;
+		[SerializeField] private bool testTouchInput;
 
 		// The position the handle was originally in.
 		private Vector3 initialPos;
 
-		protected override void OnInitialise(object[] _data) => initialPos = handle.position;
-		public override void Process() { }
+        protected override void OnInitialise(object[] _data)
+        {
+            initialPos = handle.position;
+
+            // Check if the user is using mobile controls or PC controls.
+            if (Input.currentControlScheme == "Keyboard&Mouse" && !testTouchInput)
+            {
+                //if they are, enable joystick controls
+                handle.gameObject.SetActive(false);
+                background.gameObject.SetActive(false);
+            }
+            if (Input.currentControlScheme == "Touch" || testTouchInput)
+            {
+                //if they are, enable joystick controls
+                handle.gameObject.SetActive(true);
+                background.gameObject.SetActive(true);
+            }
+        }
+
+		public override void Process() 
+		{
+            if(Input.currentControlScheme == "Keyboard&Mouse" && !testTouchInput)
+            {
+                Axis = movementAction.action.ReadValue<Vector2>(); 
+            }
+		}
 		
 		public void OnDrag(PointerEventData _eventData)
 		{

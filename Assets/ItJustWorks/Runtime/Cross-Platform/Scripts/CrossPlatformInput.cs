@@ -30,6 +30,7 @@ namespace ItJustWorks.CrossPlatform
 
 		private void Update()
 		{
+			joystick.Process();
 			swipeInput.Process();
 		}
 	}

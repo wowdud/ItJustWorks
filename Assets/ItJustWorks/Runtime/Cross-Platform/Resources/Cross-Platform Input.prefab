@@ -520,3 +520,5 @@ MonoBehaviour:
   handle: {fileID: 7871611213151632029}
   background: {fileID: 7871611212822168795}
   deadzone: 0.25
+  movementAction: {fileID: 2095516117094205978, guid: 46c1e13bc9e2a1c40b485acb54de7e3c, type: 3}
+  testTouchInput: 0
